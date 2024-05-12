@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <style media="screen">
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      background: linear-gradient(to right, #b92b27, #1565c0);
+    }
+
+    .jumbotron h1 {
+      text-align: center;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  {% include "quiz/navbar.html" %}
+  <br><br>
+  <div class="jumbotron" style="margin-bottom:0px;">
+    <h1 class="display-4" style="color: white;">Hello, Teacher</h1>
+    <p class="lead" style="color: white;">Welcome to Brain Hunt</p>
+
+    <p style="color: white;">You can access various features after Login.</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="teachersignup" role="button">Create Your Account</a>
+      <a class="btn btn-primary btn-lg" href="teacherlogin" role="button">Login</a>
+    </p>
+    <br><br><br><br><br><br><br><br>
+  </div>
+  {% include "quiz/footer.html" %}
+</body>
+
+</html>
+

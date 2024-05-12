@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <style media="screen">
+    body {
+      background: linear-gradient(to right, #b92b27, #1565c0); /* Background gradient */
+      color: white; /* Text color */
+    }
+    
+    .container {
+      max-width: 600px; /* Adjust container width as needed */
+      margin: auto; /* Center the container */
+      padding: 20px; /* Add some padding to the container */
+      text-align: center; /* Center align content */
+    }
+
+    .alert {
+      color: white; /* Text color */
+      padding: 10px; /* Add padding for better appearance */
+    }
+
+    .form-group {
+      margin-bottom: 20px; /* Add some space between form elements */
+      color: white; 
+    }
+
+    .btn {
+      background-color: #1565c0; /* Button background color */
+      border: none; /* Remove button border */
+      color: white; /* Button text color */
+      padding: 10px 20px; /* Button padding */
+      cursor: pointer; /* Add pointer cursor on hover */
+    }
+
+    .btn:hover {
+      background-color: #0d47a1; /* Darker background color on hover */
+    }
+  </style>
+
+</head>
+
+<body>
+
+  {% include "quiz/navbar.html" %}
+  <br><br>
+  <div class="container">
+    <h3 class='alert'>Send Us Your Valuable Feedback!</h3>
+    <form method="POST" autocomplete="off">
+      <!-- Very Important csrf Token -->
+      {% csrf_token %}
+      <div class="form-group">
+        {{ form.as_p }}
+      </div>
+      <input type="submit" value="Send Message" class='btn btn-primary btn-lg'>
+    </form>
+  </div>
+
+  <br><br><br><br><br><br>
+  {% include "quiz/footer.html" %}
+</body>
+
+</html>
+
+

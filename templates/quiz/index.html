@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+<title>{% block title %}Brain Hunt{% endblock %}</title>
+<style>
+  .jumbotron{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background: linear-gradient(to right, #b92b27, #1565c0);
+  }
+  .display-1
+  {
+    color:rgb(52, 38, 47);
+  }
+</style>
+</head>
+<body>
+  {% include "quiz/navbar.html" %}
+<br><br>
+<section id="section-jumbotron" class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center" style="margin-bottom:0px;">
+  <div class="container text-center">
+    <h1 class="display-1">Join the Quiz Fun!</h1>
+    <p class="display-4 d-none d-sm-block" style="color: white;">Push your limits and see how much you know!</p>
+    <p class="display-4" style="color: white;"><strong> Begin Your Quest</strong></p>
+    <br><br><br><br><br>
+  </div>  
+</section>
+  {% include "quiz/footer.html" %}
+</body>
+
+</html>
+

@@ -1,0 +1,82 @@
+<!-- <!DOCTYPE html>
+{% load widget_tweaks %}
+
+
+  <style media="screen">
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    .jumbotron h1 {
+      text-align: center;
+    }
+
+    .alert {
+      margin: 0px;
+    }
+  </style>
+  <body>
+    {% include "quiz/navbar.html" %}
+
+      <div class="jumbotron" style="margin-top: 0px;
+        margin-bottom: 0px;">
+        <h1 class="display-4">Hello {{request.user.first_name}}</h1>
+        <p class="lead">Your Account is not approved till now <br><br>Our Team is checking your profile <br><br> Soon Your Account Will Be Approved</p>
+        <hr class="my-4">
+        <p>Check Later</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="/logout" role="button">Logout For Now</a>
+        </p>
+
+        <br><br><br>
+      </div>
+
+{% include "quiz/footer.html" %}
+  </body>
+</html> -->
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Account Approval Pending</title>
+
+  <style media="screen">
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      background: linear-gradient(to right, #b92b27, #1565c0); /* Background gradient */
+      color: white; /* Text color */
+      padding: 20px; /* Add padding for better appearance */
+    }
+
+    .jumbotron h1 {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  {% include "quiz/navbar.html" %}
+  <br><br>
+  <center>
+    <h1 class='jumbotron' style="margin-bottom:0px;">Hello {{request.user.first_name}}</h1>
+  </center>
+
+  <div class="jumbotron" style="margin-bottom: 0px;margin-top: 0px;">
+    <p class="lead">Your Account is not approved till now <br>Our Team is checking your profile <br><br> Soon Your Account Will Be Approved</p>
+    <p>Check Later</p>
+
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="/logout" role="button">Logout For Now</a>
+    </p>
+  
+  </div>
+
+  {% include "quiz/footer.html" %}
+</body>
+
+</html>
